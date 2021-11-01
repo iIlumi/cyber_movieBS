@@ -171,11 +171,22 @@
             <h2 class="title">New In</h2>
             <div class="newIn__content">
                 <div class="row">
+                    <!-- 
+                        Chú ý ở đây chỉ newIn__play được position absolute nên thẻ con muốn center vào phải 
+                        đưa vô 1 div abs nữa
+                        Hoặc dùng kỹ thuật display flex canh center chiều dọc 
+                -->
                     <div class="col-3">
                         <div class="newIn__img">
                             <img class="img-fluid" src="./img/movie-1.jpg" alt="movie-1">
                             <div class="newIn__overlay"></div>
-                            <div class="newIn__play"></div>
+                            <div class="newIn__play">
+                                <div>
+                                    <a href="#"><i class="fa fa-play"></i></a>
+                                    <a href="#">Read more</a>
+                                    <p class="date">Released: 7 Mar, 2017</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="newIn__title">
                             <h3>The last post</h3>
