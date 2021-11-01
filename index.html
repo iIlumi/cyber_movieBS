@@ -76,6 +76,41 @@
             </div>
         </nav>
     </header>
+
+    <header id="headerFixed" class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavBar"
+                aria-controls="movieNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Nếu ko dùng cdn thì sẽ ko có sẵn icon -->
+                <!-- <i class="fa fa-bars"></i> -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="movieNavBar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item gradient-underline active">
+                        <!-- span hỗ trợ accessibility xóa ko sao -->
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item gradient-underline">
+                        <a class="nav-link" href="#">WHAT'S ON</a>
+                    </li>
+                    <li class="nav-item gradient-underline">
+                        <a class="nav-link" href="#">SHORTCODES</a>
+                    </li>
+                    <li class="nav-item gradient-underline">
+                        <a class="nav-link" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item gradient-underline">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
     <section class="movieCarousel">
         <!-- <div id="movieCarouselId" class="carousel slide" data-ride="carousel"> -->
         <!-- Ẩn đi data-ride để carousel ko tự đổi, dễ code-debug hơn -->

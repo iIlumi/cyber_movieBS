@@ -107,6 +107,13 @@ Như vậy sẽ giữ underline và border trùng nhau và kéo dài hết nav i
   padding: 20px 24px;
 }
 
+#headerFixed {
+  position: fixed;
+  top: 0;
+  
+  background-color: #101010;
+}
+
 /* NOTE CAROUSEL */
 /* 
 Gọi trực tiếp vô class vẫn OK nhưng để vậy để độ ưu tiên cao 
