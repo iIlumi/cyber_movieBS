@@ -110,8 +110,20 @@ Như vậy sẽ giữ underline và border trùng nhau và kéo dài hết nav i
 #headerFixed {
   position: fixed;
   top: 0;
-  
+
   background-color: #101010;
+  /* 
+Đưa class container vô div trong đồng thời set lại w100% do bị position fixed reset 
+*/
+  width: 100%;
+  /* Set vị trí ban đầu kéo ngược lên trên khỏi trình duyệt
+   -50% đầu tiên là thuộc tính canh center của tag header trước đó 
+   (ele header sẽ bị ảnh hưởng css từ cả css từ tag header và cả class đi kèm với nó, nhưng khí đó transform lại tác động nhau !!!)
+   
+   Ở đây bắt buộc phải ghi thêm cả 2 vì css transform ko cho ghi bổ sung ~ giống lúc kết hợp cả transform và translate
+   
+   */
+  transform: translate(-50%, -20%);
 }
 
 /* NOTE CAROUSEL */
