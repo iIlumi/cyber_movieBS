@@ -351,3 +351,36 @@ Cách 2 là tạo 1 div overlay rỗng, trong carousel-item và bên dưới img
 .newIn__title i {
   color: #fbbd61;
 }
+
+/* 
+Trước khi code nên comment trước các phần img còn lại đi để tránh bị rối giao diện
+Phần new In overlay code css thuần lặp code khác nhiều,
+Tuy nhiên trước refactor thì cứ vậy để code nhanh, giải quyết xong vấn đề trước
+Vì skewX phải canh chỉnh lại kích thẻ nên tùy phần tử 
+nếu là scss thì sẽ tiện hơn
+*/
+
+.newIn__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.newIn__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 200%;
+  height: 100%;
+
+  background: linear-gradient(to bottom, #fbbd61, #ec7532);
+  opacity: 0.9;
+
+  transform: skewX(30deg) translateX(-150%);
+  transition: 0.5s;
+}
+
+.newIn__img:hover .newIn__overlay {
+  transform: skewX(30deg) translateX(-30%);
+}
