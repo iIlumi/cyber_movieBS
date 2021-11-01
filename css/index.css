@@ -421,6 +421,13 @@ Canh center responsive luôn, bất chấp màn hình
 
   text-align: center;
   line-height: 80px;
+
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.newIn__play i:hover {
+  transform: scale(0.9);
 }
 
 .newIn__play a {
