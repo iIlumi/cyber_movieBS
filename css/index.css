@@ -182,6 +182,36 @@ Nên sử dụng z-index tăng dần để dễ kiểm soát tương tác giữa
 
 /* NOTE edit carousel dot */
 
+/* 
+Canh vị trí dot carousel thẳng hàng với phần content ở trên
+Phải lấy tool đo khoảng cách mới dễ thấy
+*/
+
+#movieCarouselId .carousel-indicators {
+  justify-content: flex-start;
+  /* 
+  Set flex-start nhưng
+  vị trí dot vẫn chưa thẳng hàng với circle PG ở trên
+  Dùng tool đo sẽ thấy rõ, trước tiên reset các thông số do class BS thêm vào trước
+
+  Sẽ áp dụng kỹ thuật của caption vào phần dot tương tự
+  -> đưa vào trong classs container
+  -> reset margin do carousel BS thêm
+  15px containter caption
+  15px col-9
+  Tuy nhiên ko cần set phía right vì chỉ canh trái
+
+  */
+
+  margin-left: 0;
+  padding-left: 30px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: 70px;
+}
+
 /*
 
 BS 4.5 background color giữa content và border sẽ có 1 viền nhỏ - zoom lên sẽ thấy 
@@ -213,4 +243,3 @@ hoặc set trực tiếp background-clip: border-box;
   background-color: white;
   background-clip: border-box;
 }
-
