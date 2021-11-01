@@ -119,8 +119,11 @@ Kết hợp inline-block để vừa set được kích thước vừa ko chiế
   margin-right: 8px;
 }
 
-/* THường viền mặc định của button khá xấu nên ít để hoặc đè màu vô */
-.movieCarousel__trailer > button {
+/* THường viền mặc định của button khá xấu nên ít để hoặc đè màu vô 
+Dùng opacity sẽ bị bóng mờ trước khi phủ
+Overflow hidden thì đủ, ko cần thêm opacity nữa
+*/
+.movieCarousel__trailer button {
   padding: 12px 24px;
 
   border: none;
@@ -131,4 +134,32 @@ Kết hợp inline-block để vừa set được kích thước vừa ko chiế
   color: white;
 
   background: linear-gradient(to right, #fbbd61, #ec7532);
+
+  position: relative;
+  overflow: hidden;
 }
+
+/* Những overlay thường tại qua before để tránh tạo thành phần html giả thừa 
+Kết hợp nhiều transform phải viết chung, ko được tách ra 2 cái
+*/
+.movieCarousel__trailer button::before {
+  content: "";
+  display: block;
+  width: 110%;
+  height: 100%;
+
+  background-color: #ec7532;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Chưa hover */
+  transform: skewX(30deg) translateX(-110%);
+  transition: all 0.3s;
+}
+
+.movieCarousel__trailer button:hover:before {
+  transform: skewX(30deg) translateX(-10px);
+}
+
