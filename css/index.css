@@ -124,6 +124,8 @@ Như vậy sẽ giữ underline và border trùng nhau và kéo dài hết nav i
    
    */
   transform: translate(-50%, -20%);
+  /* Thêm tên cụ thể của đúng duy nhất hiệu ứng transform */
+  transition: transform 0.3s;
 }
 
 /* NOTE CAROUSEL */
