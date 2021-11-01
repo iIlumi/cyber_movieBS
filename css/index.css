@@ -12,6 +12,38 @@ body {
   color: #717171;
 }
 
+body > section {
+  padding: 75px 0;
+}
+
+/* Nếu xử lý tile tận dụng gradient underline tuy sẽ gọn code nhưng rối về xử lý ko cần thiết
+Bản thân line này cũng có kích thước cố định
+Nếu muốn tạo thì phải lồng span-inline block trong h2, phức tạp ko cần thiết
+Bản thân h2 cũng như 2 thẻ div sẵn nhưng ko lên lồng inline block gì trong đó nữa, chỉ chứa các inline thuần dạng text thôi
+*/
+.title {
+  color: #ec7532;
+
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+
+  border-bottom: 1px solid #d8d8d8;
+
+  margin-bottom: 40px;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 125px;
+  height: 4px;
+
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+
+  margin-top: 20px;
+}
+
 /* line style */
 /* 
 linear gradient
@@ -83,6 +115,11 @@ Tận dụng pos để center theo chiều dọc luôn
 Thay vì set width kết hợp responsive phức tạp thì có thể tận dụng col của BS - 1 dạng built in respon sive
 Chú ý là col phải ở trong div container
 */
+
+section.movieCarousel {
+  padding: 0;
+}
+
 #movieCarouselId .carousel-item .carousel-caption {
   top: 55%;
   left: 50%;
@@ -298,4 +335,19 @@ Cách 2 là tạo 1 div overlay rỗng, trong carousel-item và bên dưới img
   left: 0;
 
   background: linear-gradient(to top, black, transparent);
+}
+
+/* NOTE New In */
+.newIn__title {
+  text-align: center;
+}
+
+.newIn__title h3 {
+  font-size: 18px;
+  color: #4a4a4a;
+  margin: 1rem 0;
+}
+
+.newIn__title i {
+  color: #fbbd61;
 }
