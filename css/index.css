@@ -137,7 +137,7 @@ Overflow hidden thì đủ, ko cần thêm opacity nữa
 
   position: relative;
   overflow: hidden;
-/* Viền xanh do class btn của BS thêm vào */
+  /* Viền xanh do class btn của BS thêm vào */
   outline: none;
 }
 
@@ -147,7 +147,7 @@ Overflow hidden thì đủ, ko cần thêm opacity nữa
 
 /* Những overlay thường tại qua before để tránh tạo thành phần html giả thừa 
 Kết hợp nhiều transform phải viết chung, ko được tách ra 2 cái
-TODO opacity ? - màu mờ khác với design
+opacity làm mờ chữ, ko dùng
 */
 .movieCarousel__trailer button::before {
   content: "";
@@ -179,3 +179,38 @@ Nên sử dụng z-index tăng dần để dễ kiểm soát tương tác giữa
   position: relative;
   z-index: 2;
 }
+
+/* NOTE edit carousel dot */
+
+/*
+
+BS 4.5 background color giữa content và border sẽ có 1 viền nhỏ - zoom lên sẽ thấy 
+-> do background-clip định nghĩa vùng phủ của này
+-> chỉ phủ từ vùng padding trở vô
+Thay vì dùng background color thì solve bằng việc chỉ ghi background
+-> sẽ tự solve vấn đề background-clip vì tính chất default hết các giá trị đi kèm background
+hoặc set trực tiếp background-clip: border-box;
+
+*/
+
+#movieCarouselId .carousel-indicators li {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  border: 2px solid white;
+
+  /* background-color: transparent; */
+  background: transparent;
+  opacity: 1;
+  /* Cách solve 2 */
+  /* background-clip: border-box; */
+}
+
+/* set clip ở đây hơi thừa vì ele con theo cha */
+#movieCarouselId .carousel-indicators li.active {
+  background-color: white;
+  background-clip: border-box;
+}
+
