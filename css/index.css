@@ -137,10 +137,17 @@ Overflow hidden thì đủ, ko cần thêm opacity nữa
 
   position: relative;
   overflow: hidden;
+/* Viền xanh do class btn của BS thêm vào */
+  outline: none;
+}
+
+.movieCarousel__trailer button:hover {
+  color: white;
 }
 
 /* Những overlay thường tại qua before để tránh tạo thành phần html giả thừa 
 Kết hợp nhiều transform phải viết chung, ko được tách ra 2 cái
+TODO opacity ? - màu mờ khác với design
 */
 .movieCarousel__trailer button::before {
   content: "";
@@ -153,6 +160,7 @@ Kết hợp nhiều transform phải viết chung, ko được tách ra 2 cái
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 
   /* Chưa hover */
   transform: skewX(30deg) translateX(-110%);
@@ -163,3 +171,11 @@ Kết hợp nhiều transform phải viết chung, ko được tách ra 2 cái
   transform: skewX(30deg) translateX(-10px);
 }
 
+/* z-index chỉ dùng được khi đi với position */
+/* Chữ đã ở đúng vị trí nên chỉ cần position relative rồi dùng với z-index 
+Nên sử dụng z-index tăng dần để dễ kiểm soát tương tác giữa các ele set với các ele dc css do thư viện
+*/
+.movieCarousel__trailer button span {
+  position: relative;
+  z-index: 2;
+}
