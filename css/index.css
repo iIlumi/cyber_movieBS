@@ -514,6 +514,13 @@ cách này sẽ khiến date rớt chữ, canh khác
   display: block;
 }
 
+#myTabContent .tab-pane .showTimes__row:not(:last-child){
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.showTimes__row img{
+    border-radius: 10px;
+}
 .showTimes__row div p:first-of-type {
   font-size: 14px;
   color: #ec7532;
