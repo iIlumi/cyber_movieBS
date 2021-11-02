@@ -33,6 +33,11 @@ Bản thân h2 cũng như 2 thẻ div sẵn nhưng ko lên lồng inline block g
   margin-bottom: 40px;
 }
 
+.title--white {
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
 .title::after {
   content: "";
   display: block;
@@ -514,12 +519,12 @@ cách này sẽ khiến date rớt chữ, canh khác
   display: block;
 }
 
-#myTabContent .tab-pane .showTimes__row:not(:last-child){
+#myTabContent .tab-pane .showTimes__row:not(:last-child) {
   border-bottom: 1px solid #d8d8d8;
 }
 
-.showTimes__row img{
-    border-radius: 10px;
+.showTimes__row img {
+  border-radius: 10px;
 }
 .showTimes__row div p:first-of-type {
   font-size: 14px;
@@ -577,4 +582,82 @@ cách này sẽ khiến date rớt chữ, canh khác
   font-weight: 700;
 
   border-radius: 50%;
+}
+
+/* NOTE COMING SOON */
+
+.comingSoon {
+  /* background-image: url(../img/slide-3.png); */
+  /* 
+  Check bản thân hình background đã tính chất trong suốt
+  -> Hình style đặc biệt của đuôi png
+  Khi đưa vào web sẽ bị màu nền của web là tráng đè vô
+  -> Kết hợp các thuộc tính background để xử lý
+  */
+  background: url(../img/slide-3.png) #101010;
+  background-size: cover;
+  color: white;
+}
+
+.comingSoon__type {
+  font-size: 14px;
+  color: #ec7532;
+  letter-spacing: 2px;
+}
+
+.comingSoon h3 {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+/* icon calendar được lồng bên dưới span để tránh css chung */
+.comingSoon__rating > i {
+  color: #fbbd61;
+}
+
+.comingSoon p {
+  margin: 1rem 0;
+}
+
+.comingSoon a {
+  font-size: 12px;
+  letter-spacing: 4px;
+
+  color: #ec7532;
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.comingSoon a:hover {
+  color: white;
+}
+
+.comingSoon__video {
+  position: relative;
+}
+
+.comingSoon__video i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+/* Nhớ copy lại translate vì transform ko đi riêng được */
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s;
+
+  text-align: center;
+  line-height: 80px;
+  font-size: 25px;
+
+  width: 80px;
+  height: 80px;
+
+  border: 1px solid #ec7532;
+  border-radius: 50%;
+}
+
+/* Nhớ copy lại translate vì transform ko đi riêng được */
+.comingSoon__video:hover i {
+  transform: translate(-50%, -50%) scale(0.9);
 }
