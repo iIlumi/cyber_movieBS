@@ -27,6 +27,13 @@
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- VenoBox css modal popup
+    https://veno.es/venobox/
+
+    -->
+    <link rel="stylesheet" href="./css/venobox.css">
+
+    <!-- Main css -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -503,10 +510,24 @@
                     <a href="#">MORE INFO <i class="fa fa-angle-right"></i></a>
                 </div>
                 <div class="col-6">
-                    <div class="comingSoon__video">
-                        <img class="img-fluid" src="./img/slide-3-video.png" alt="coming soon trailer">
-                        <i class="fa fa-play"></i>
-                    </div>
+                    <!-- Veno box modal popup -->
+                    <!-- 
+                        Chọn get share link trên youtube
+                        Với những thư viện liên quan tới video, nên chạy bằng live server để tránh đường dẫn lỗi
+                        Các atrribute data- trên html thường do thư viện hoặc người dùng tự định nghĩa, bản thân html ko có các thuộc tính này 
+                    -->
+                    <!-- !!! thay đổi cấu trúc css phải check lại css cẩn thận
+                        Check luôn việc css mặc định của thư viện có đè vô ko
+                        TH này phải set lại màu của nút play
+                    -->
+
+                    <a class="venobox" data-autoplay="false" data-vbtype="video"
+                        href="https://youtu.be/mVqdRSd0S58">
+                        <div class="comingSoon__video">
+                            <img class="img-fluid" src="./img/slide-3-video.png" alt="coming soon trailer">
+                            <i class="fa fa-play"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -576,6 +597,16 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
+    <!-- VenoBox js -->
+    <script src="./js/venobox.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.venobox').venobox();
+        });
+    </script>
+
+    <!-- show fixed header -->
     <script>
         window.onscroll = function () {
             // Code tạo hiệu ứng xuất hiện thanh màu đen khi scroll

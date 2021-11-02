@@ -654,6 +654,8 @@ cách này sẽ khiến date rớt chữ, canh khác
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s;
 
+  /* đè lại css thẻ a vì thay đổi cấu trúc html khi dùng thư viện veno Box */
+  color: white;
   text-align: center;
   line-height: 80px;
   font-size: 25px;
