@@ -314,32 +314,46 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <!-- Chú ý href và id -->
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="mon-tab" data-toggle="tab" href="#mon" role="tab"
-                        aria-controls="home" aria-selected="true">MON</a>
+                    <a class="nav-link gradient-underline active" id="mon-tab" data-toggle="tab" href="#mon" role="tab"
+                        aria-controls="home" aria-selected="true">
+                        <span>MON</span>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="tue-tab" data-toggle="tab" href="#tue" role="tab" aria-controls="profile"
-                        aria-selected="false">TUE</a>
+                    <a class="nav-link gradient-underline" id="tue-tab" data-toggle="tab" href="#tue" role="tab" aria-controls="profile"
+                        aria-selected="false">
+                        <span>TUE</span>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="today-tab" data-toggle="tab" href="#today" role="tab"
-                        aria-controls="contact" aria-selected="false">TODAY</a>
+                    <a class="nav-link gradient-underline" id="today-tab" data-toggle="tab" href="#today" role="tab"
+                        aria-controls="contact" aria-selected="false">
+                        <span>TODAY</span>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="thu-tab" data-toggle="tab" href="#thu" role="tab" aria-controls="contact"
-                        aria-selected="false">THU</a>
+                    <a class="nav-link gradient-underline" id="thu-tab" data-toggle="tab" href="#thu" role="tab" aria-controls="contact"
+                        aria-selected="false">
+                        <span>THU</span>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="fri-tab" data-toggle="tab" href="#fri" role="tab" aria-controls="contact"
-                        aria-selected="false">FRI</a>
+                    <a class="nav-link gradient-underline" id="fri-tab" data-toggle="tab" href="#fri" role="tab" aria-controls="contact"
+                        aria-selected="false">
+                        <span>FRI</span>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="sat-tab" data-toggle="tab" href="#sat" role="tab" aria-controls="contact"
-                        aria-selected="false">SAT</a>
+                    <a class="nav-link gradient-underline" id="sat-tab" data-toggle="tab" href="#sat" role="tab" aria-controls="contact"
+                        aria-selected="false">
+                        <span>SAT</span>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="sun-tab" data-toggle="tab" href="#sun" role="tab" aria-controls="contact"
-                        aria-selected="false">SUN</a>
+                    <a class="nav-link gradient-underline" id="sun-tab" data-toggle="tab" href="#sun" role="tab" aria-controls="contact"
+                        aria-selected="false">
+                        <span>SUN</span>
+                    </a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -347,7 +361,7 @@
                 vì id ở trên đã có thêm đuôi - tab rồi nên ko cần ở dưới phải viết dài dòng mon--content nữa
                 -->
                 <div class="tab-pane fade show active" id="mon" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="row">
+                    <div class="row py-5 showTimes__row">
                         <div class="col-2">
                             <img class="img-fluid" src="./img/movie-5.jpg" alt="movie-5">
                         </div>
@@ -361,18 +375,18 @@
                                 <a href="#">FULL SYNOPSIS <i class="fa fa-angle-right"></i> </a>
                             </p>
                             <!-- có thể dùng d-flex là đủ, ko cần lồng grid nhưng làm tham khảo -->
-                            <div class="row">
+                            <div class="row showTimes__runningTimes">
                                 <div class="col-9 d-flex align-items-center">
                                     <span><i class="fa fa-clock"></i> VIEWING TIMES</span>
                                     <!-- thêm class btn của button để xóa border mặc định của trình duyệt, nếu xấu thì css lại sau -->
                                     <div>
-                                        <button class="btn">10:30</button>
+                                        <button class="btn" disabled>10:30</button>
                                         <button class="btn">12:30</button>
                                         <button class="btn">14:30</button>
                                         <button class="btn">16:30</button>
                                     </div>
                                 </div>
-                                <div class="col-3 text-right">
+                                <div class="col-3 text-right showTimes__mins">
                                     <span>105 MINS</span>
                                     <span>15</span>
                                 </div>

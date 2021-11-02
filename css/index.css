@@ -480,3 +480,94 @@ cách này sẽ khiến date rớt chữ, canh khác
 
   transform: translate(-50%, -50%);
 } */
+
+/* NOTE SHOWTIMES */
+
+.showTimes .nav-tabs .nav-item.show .nav-link,
+.showTimes .nav-tabs .nav-link.active {
+  border: none;
+}
+
+/* viền 3 cạnh xung quanh khi hover vào */
+.showTimes .nav-tabs .nav-link {
+  border: none;
+
+  padding: 0;
+
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #4a4a4a;
+}
+
+.showTimes .nav-tabs .nav-link.active {
+  color: #ec7532;
+}
+
+/* Inspect code để thấy css làm mất border khi click vào và đè lại*/
+/* Ở đây BS ko css cho focus / hpver mà chỉ css vào ele bình thường */
+.showTimes .nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+
+.showTimes .nav-tabs .nav-link span {
+  padding: 15px 30px;
+  display: block;
+}
+
+.showTimes__row div p:first-of-type {
+  font-size: 14px;
+  color: #ec7532;
+  letter-spacing: 2px;
+
+  margin-bottom: 0;
+}
+
+.showTimes__row h3 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #101010;
+}
+
+.showTimes__row a {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ec7532;
+
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.showTimes__row a:hover {
+  color: #101010;
+}
+
+.showTimes__runningTimes {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #4a4a4a;
+}
+
+.showTimes__runningTimes button {
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  background-color: #d8d8d8;
+  color: #717171;
+}
+
+.showTimes__mins span:last-child {
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+
+  color: white;
+  background-color: #4a4a4a;
+
+  text-align: center;
+  line-height: 33px;
+  font-weight: 700;
+
+  border-radius: 50%;
+}
