@@ -62,8 +62,9 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavBar"
                 aria-controls="movieNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- Nếu ko dùng cdn thì sẽ ko có sẵn icon -->
-                <i class="fa fa-bars"></i>
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
             </button>
 
             <div class="collapse navbar-collapse" id="movieNavBar">
@@ -99,8 +100,9 @@
                 aria-controls="movieNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- Nếu ko dùng cdn thì sẽ ko có sẵn icon -->
                 <!-- Tuy nhiên khi copy ra và set position lại thì mất icon, phải thêm lại, phần header transparent vẫn ok -->
-                <i class="fa fa-bars"></i>
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
             </button>
             <div class="collapse navbar-collapse" id="movieNavBar">
                 <ul class="navbar-nav ml-auto">
@@ -126,9 +128,12 @@
     </header>
 
     <section class="movieCarousel">
-        <!-- <div id="movieCarouselId" class="carousel slide" data-ride="carousel"> -->
-        <!-- Ẩn đi data-ride để carousel ko tự đổi, dễ code-debug hơn -->
-        <div id="movieCarouselId" class="carousel slide carousel-fade">
+        <!-- Ẩn đi data-ride để carousel ko tự đổi, dễ code-debug hơn 
+        Có thể set data-interval = "false" để stop motion, khỏi xóa đi
+        https://getbootstrap.com/docs/4.5/components/carousel/#via-data-attributes
+        -->
+        <!-- <div id="movieCarouselId" class="carousel slide carousel-fade"> -->
+        <div id="movieCarouselId" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
             <ol class="container carousel-indicators">
                 <li data-target="#movieCarouselId" data-slide-to="0" class="active"></li>
                 <li data-target="#movieCarouselId" data-slide-to="1"></li>
@@ -225,7 +230,7 @@
                         đưa vô 1 div abs nữa
                         Hoặc dùng kỹ thuật display flex canh center chiều dọc 
                 -->
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div class="newIn__img">
                             <img class="img-fluid" src="./img/movie-1.jpg" alt="movie-1">
                             <div class="newIn__overlay"></div>
@@ -237,7 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="newIn__title">
+                        <div class="newIn__title mb-3 mb-md-0">
                             <h3>The last post</h3>
                             <div>
                                 <i class="fa fa-star"></i>
@@ -248,7 +253,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div class="newIn__img">
                             <img class="img-fluid" src="./img/movie-2.jpg" alt="movie-2">
                             <div class="newIn__overlay"></div>
@@ -260,7 +265,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="newIn__title">
+                        <div class="newIn__title mb-3 mb-md-0">
                             <h3>Dark and lonely</h3>
                             <div>
                                 <i class="fa fa-star"></i>
@@ -271,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div class="newIn__img">
                             <img class="img-fluid" src="./img/movie-3.jpg" alt="movie-3">
                             <div class="newIn__overlay"></div>
@@ -283,7 +288,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="newIn__title">
+                        <div class="newIn__title mb-3 mb-md-0">
                             <h3>Venture</h3>
                             <div>
                                 <i class="fa fa-star"></i>
@@ -294,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div class="newIn__img">
                             <img class="img-fluid" src="./img/movie-4.jpg" alt="movie-4.jpg">
                             <div class="newIn__overlay"></div>
@@ -306,7 +311,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="newIn__title">
+                        <div class="newIn__title mb-3 mb-md-0">
                             <h3>Hush</h3>
                             <div>
                                 <i class="fa fa-star"></i>
@@ -323,8 +328,9 @@
     </section>
     <section class="showTimes">
         <!-- https://getbootstrap.com/docs/4.5/components/navs/#javascript-behavior -->
-        <div class="container">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <div class="container-md">
+            <!-- https://getbootstrap.com/docs/4.5/utilities/flex/ -->
+            <ul class="nav nav-tabs flex-column flex-sm-row" id="myTab" role="tablist">
                 <!-- Chú ý href và id -->
                 <li class="nav-item" role="presentation">
                     <a class="nav-link gradient-underline active" id="mon-tab" data-toggle="tab" href="#mon" role="tab"
@@ -375,10 +381,10 @@
                 -->
                 <div class="tab-pane fade show active" id="mon" role="tabpanel" aria-labelledby="home-tab">
                     <div class="row py-5 showTimes__row">
-                        <div class="col-2">
+                        <div class="col-12 col-md-3 col-lg-2">
                             <img class="img-fluid" src="./img/movie-5.jpg" alt="movie-5">
                         </div>
-                        <div class="col-10">
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
                             <p>ACTION, ADVENTURE, FANTASY</p>
                             <h3>Captain America: The First Avenger</h3>
                             <p>European mercenaries searching for black powder become embroiled in the defense of It's
@@ -389,7 +395,7 @@
                             </p>
                             <!-- có thể dùng d-flex là đủ, ko cần lồng grid nhưng làm tham khảo -->
                             <div class="row showTimes__runningTimes">
-                                <div class="col-9 d-flex align-items-center">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
                                     <span><i class="fa fa-clock"></i> VIEWING TIMES</span>
                                     <!-- thêm class btn của button để xóa border mặc định của trình duyệt, nếu xấu thì css lại sau -->
                                     <div>
@@ -399,7 +405,7 @@
                                         <button class="btn">16:30</button>
                                     </div>
                                 </div>
-                                <div class="col-3 text-right showTimes__mins">
+                                <div class="col-12 col-md-3 text-md-right mt-3 mt-md-0 showTimes__mins">
                                     <span>105 MINS</span>
                                     <span>15</span>
                                 </div>
@@ -407,10 +413,10 @@
                         </div>
                     </div>
                     <div class="row py-5 showTimes__row">
-                        <div class="col-2">
+                        <div class="col-12 col-md-3 col-lg-2">
                             <img class="img-fluid" src="./img/movie-6.jpg" alt="movie-6">
                         </div>
-                        <div class="col-10">
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
                             <p>ACTION, ADVENTURE, FANTASY</p>
                             <h3>It's over</h3>
                             <p>European mercenaries searching for black powder become embroiled in the defense of It's
@@ -419,7 +425,7 @@
                                 <a href="#">FULL SYNOPSIS <i class="fa fa-angle-right"></i> </a>
                             </p>
                             <div class="row showTimes__runningTimes">
-                                <div class="col-9 d-flex align-items-center">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
                                     <span><i class="fa fa-clock"></i> VIEWING TIMES</span>
                                     <div>
                                         <button class="btn" disabled>10:30</button>
@@ -428,7 +434,7 @@
                                         <button class="btn">16:30</button>
                                     </div>
                                 </div>
-                                <div class="col-3 text-right showTimes__mins">
+                                <div class="col-12 col-md-3 text-md-right mt-3 mt-md-0 showTimes__mins">
                                     <span>105 MINS</span>
                                     <span>15</span>
                                 </div>
@@ -436,10 +442,10 @@
                         </div>
                     </div>
                     <div class="row py-5 showTimes__row">
-                        <div class="col-2">
+                        <div class="col-12 col-md-3 col-lg-2">
                             <img class="img-fluid" src="./img/movie-7.jpg" alt="movie-7">
                         </div>
-                        <div class="col-10">
+                        <div class="col-12 col-md-9 col-lg-10 mt-3 mt-md-0">
                             <p>ACTION, ADVENTURE, FANTASY</p>
                             <h3>It's over</h3>
                             <p>European mercenaries searching for black powder become embroiled in the defense of It's
@@ -448,7 +454,7 @@
                                 <a href="#">FULL SYNOPSIS <i class="fa fa-angle-right"></i> </a>
                             </p>
                             <div class="row showTimes__runningTimes">
-                                <div class="col-9 d-flex align-items-center">
+                                <div class="col-12 col-md-9 d-lg-flex align-items-center">
                                     <span><i class="fa fa-clock"></i> VIEWING TIMES</span>
                                     <div>
                                         <button class="btn" disabled>10:30</button>
@@ -457,7 +463,7 @@
                                         <button class="btn">16:30</button>
                                     </div>
                                 </div>
-                                <div class="col-3 text-right showTimes__mins">
+                                <div class="col-12 col-md-3 text-md-right mt-3 mt-md-0 showTimes__mins">
                                     <span>105 MINS</span>
                                     <span>15</span>
                                 </div>
@@ -497,7 +503,7 @@
             <!-- Grid system của BS xây dựng trên display-flex -->
             <!-- Tận dụng class để canh giữa luôn -->
             <div class="row align-items-center">
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <p class="comingSoon__type">COMEDY, CRIME</p>
                     <h3>The Hangover Part III</h3>
                     <div class="comingSoon__rating">
@@ -515,7 +521,7 @@
                         who has escaped from prison and is on the run.</p>
                     <a href="#">MORE INFO <i class="fa fa-angle-right"></i></a>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-sm-6">
                     <!-- Veno box modal popup -->
                     <!-- 
                         Chọn get share link trên youtube
@@ -545,37 +551,37 @@
                     vì item css riêng - border radius + overflow hidden nên viết gom vậy sẽ lỗi
                     best-practice vẫn là ko gom chung class khác với row
                  -->
-                <div class="col-2">
+                <div class="col-4 col-lg-2 mb-3 mb-lg-0">
                     <div class="movieList__item">
                         <img class="img-fluid" src="./img/movie-9.jpg" alt="movie-9">
                         <div class="movieList__overlay"></div>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-lg-2 mb-3 mb-lg-0">
                     <div class="movieList__item">
                         <img class="img-fluid" src="./img/movie-8.jpg" alt="movie-8">
                         <div class="movieList__overlay"></div>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-lg-2 mb-3 mb-lg-0">
                     <div class="movieList__item">
                         <img class="img-fluid" src="./img/movie-11.jpg" alt="movie-11">
                         <div class="movieList__overlay"></div>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-lg-2">
                     <div class="movieList__item">
                         <img class="img-fluid" src="./img/movie-13.jpg" alt="movie-13">
                         <div class="movieList__overlay"></div>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-lg-2">
                     <div class="movieList__item">
                         <img class="img-fluid" src="./img/movie-12.jpg" alt="movie-12">
                         <div class="movieList__overlay"></div>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-4 col-lg-2">
                     <div class="movieList__item">
                         <img class="img-fluid" src="./img/movie-14.jpg" alt="movie-14">
                         <div class="movieList__overlay"></div>
@@ -596,7 +602,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <h3>GET IN TOUCH</h3>
                     <ul>
                         <li><a href="#">FAQs</a></li>
@@ -604,7 +610,7 @@
                         <li><a href="#">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <h3>ABOUT MOVIE STAR</h3>
                     <ul>
                         <li><a href="#">About us</a></li>
@@ -613,7 +619,7 @@
                         <li><a href="#">News</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <h3>LEGAL STUFF</h3>
                     <ul>
                         <li><a href="#">Terms & Conditions</a></li>
@@ -621,7 +627,7 @@
                         <li><a href="#">Cookie policy</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <h3>CONNECT WITH US</h3>
                     <ul>
                         <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>

@@ -859,4 +859,13 @@ footer a:hover {
   #movieCarouselId .carousel-item .carousel-caption h2 {
     font-size: 2.5rem;
   }
+
+  /* SHOWTIMES */
+  .showTimes .nav-tabs .nav-link{
+    font-size: 16px;
+  }
+
+  .showTimes .nav-tabs .nav-link span{
+    padding: 10px 20px;
+  }
 }
