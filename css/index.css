@@ -154,6 +154,29 @@ section.movieCarousel {
   padding: 0;
 }
 
+/* Phần này khi responsive mới set vô nhưng theo nguyên tắc css những item cấp cha viết trước nên chuyển lên đây */
+/* Set lại w-h cho carousel khi responsive 
+Set cho div cha trước và sau đó cho div con bên trong
+*/
+#movieCarouselId {
+  height: 650px;
+}
+
+/* 
+Vì tính chất đơn vị %, thẻ con gần nhất mới được hưởng 100%
+ko set trực tiếp ngay item được mà phải set cho các cấp cha trước gần nhất của nó - direct parent
+ */
+#movieCarouselId .carousel-item,
+#movieCarouselId .carousel-inner {
+  height: 100%;
+}
+
+/* có thể giải quyết ngớ ngẩn bằng việc chuyển sang background img pos center và bg-size cover nhưng ko hay, vừa thay đổi cấu trúc html vừa css ngược lại phần đó */
+#movieCarouselId .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
 #movieCarouselId .carousel-item .carousel-caption {
   top: 55%;
   left: 50%;
@@ -197,7 +220,7 @@ Chú ý animation-fill-mode trong docs, nếu ko set sẽ nhìn sai
 #movieCarouselId .carousel-item .carousel-caption h2 {
   font-size: 3.25rem;
   letter-spacing: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 
   animation: fadeInDown;
   animation-duration: 1s;
@@ -313,8 +336,12 @@ Phải lấy tool đo khoảng cách mới dễ thấy
 
   */
 
+  /* 
+  Khi responsive do phải chỉnh kích thước chữ nên ta sẽ chọn phương án reset padding của 1 div caption và div header nên chỉ còn 15px
+  */
+
   margin-left: 0;
-  padding-left: 30px;
+  padding-left: 15px;
 
   left: 50%;
   transform: translateX(-50%);
@@ -799,12 +826,12 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 767.98px) {
   /* GLOBAL */
   .gradient-underline.active::after {
     width: 0;
   }
-  
+
   /* HEADER */
   header .navbar-toggler {
     color: #fbbd61;
@@ -818,10 +845,18 @@ footer a:hover {
     background-color: rgba(0, 0, 0, 0.9);
 
     text-align: center;
-    z-index: 16;
   }
 
   #movieNavBar .navbar-nav .active .nav-link {
     color: #ec7532;
+  }
+
+  /* CAROUSEL */
+  /* Nếu giữ font-size 2.5 rem theo desgin thì phải gỡ padding của caption và header, chuyển padding indicator xuống 15px */
+  /* Nếu ko muốn fix lại các kích thước thì có thể để font-size nhỏ xuống 2.3 - 2,4 để title ko bị rớt dòng
+  Ở đây sẽ chọn cách 1 chỉnh lại padding hết
+  */
+  #movieCarouselId .carousel-item .carousel-caption h2 {
+    font-size: 2.5rem;
   }
 }

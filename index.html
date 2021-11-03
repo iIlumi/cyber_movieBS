@@ -41,7 +41,7 @@
     <!-- 
     https://getbootstrap.com/docs/4.5/layout/overview/#containers
         Dưới 768px - màn md trờ xuống thì container khi này theo class BS sẽ chiếm 100%
-        Sửa header Fixed ở dưới theo
+        Header fix ko cần set container lại vì design tràn ra
      -->
     <header class="container-md">
         <!-- Thường lồng bên trong thẻ p chỉ là thẻ inline
@@ -55,7 +55,7 @@
             <span class="mx-3 border-right pr-2">096.105.1014</span>
             <i class="fa fa-search"></i>
         </p>
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-md px-0">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" alt="logo">
             </a>
@@ -91,7 +91,7 @@
 
     <header id="headerFixed">
         <!-- Di chuyển container vào trong để header kéo dài 100% dc -->
-        <nav class="navbar navbar-expand-md container-md">
+        <nav class="navbar navbar-expand-md container">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" alt="logo">
             </a>
@@ -140,8 +140,8 @@
                 -->
                 <div class="carousel-item active">
                     <img src="./img/hero-1.jpg" class="d-block w-100" alt="hero-1">
-                    <div class="container carousel-caption d-none d-md-block">
-                        <div class="col-9">
+                    <div class="container carousel-caption">
+                        <div class="col-12 col-lg-9 p-0">
                             <p>ACTION, ADVENTURE, FANTASY</p>
                             <h2>End of the World: Part I</h2>
                             <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
@@ -162,8 +162,8 @@
                 </div>
                 <div class="carousel-item">
                     <img src="./img/hero-2.jpg" class="d-block w-100" alt="hero-2">
-                    <div class="container carousel-caption d-none d-md-block">
-                        <div class="col-9">
+                    <div class="container carousel-caption">
+                        <div class="col-12 col-lg-9 p-0">
                             <p>ACTION, ADVENTURE, FANTASY</p>
                             <h2>End of the World: Part II</h2>
                             <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
@@ -183,8 +183,8 @@
                 </div>
                 <div class="carousel-item">
                     <img src="./img/hero-3.jpg" class="d-block w-100" alt="hero-3">
-                    <div class="container carousel-caption d-none d-md-block">
-                        <div class="col-9">
+                    <div class="container carousel-caption">
+                        <div class="col-12 col-lg-9 p-0">
                             <p>ACTION, ADVENTURE, FANTASY</p>
                             <h2>End of the World: Part III</h2>
                             <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
