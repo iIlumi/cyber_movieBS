@@ -38,7 +38,12 @@
 </head>
 
 <body>
-    <header class="container">
+    <!-- 
+    https://getbootstrap.com/docs/4.5/layout/overview/#containers
+        Dưới 768px - màn md trờ xuống thì container khi này theo class BS sẽ chiếm 100%
+        Sửa header Fixed ở dưới theo
+     -->
+    <header class="container-md">
         <!-- Thường lồng bên trong thẻ p chỉ là thẻ inline
             lồng thẻ span vào để dễ gọi css ra
         -->
@@ -50,14 +55,14 @@
             <span class="mx-3 border-right pr-2">096.105.1014</span>
             <i class="fa fa-search"></i>
         </p>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavBar"
                 aria-controls="movieNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- Nếu ko dùng cdn thì sẽ ko có sẵn icon -->
-                <!-- <i class="fa fa-bars"></i> -->
+                <i class="fa fa-bars"></i>
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -86,14 +91,15 @@
 
     <header id="headerFixed">
         <!-- Di chuyển container vào trong để header kéo dài 100% dc -->
-        <nav class="navbar navbar-expand-lg container">
+        <nav class="navbar navbar-expand-md container-md">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavBar"
                 aria-controls="movieNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- Nếu ko dùng cdn thì sẽ ko có sẵn icon -->
-                <!-- <i class="fa fa-bars"></i> -->
+                <!-- Tuy nhiên khi copy ra và set position lại thì mất icon, phải thêm lại, phần header transparent vẫn ok -->
+                <i class="fa fa-bars"></i>
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="movieNavBar">
@@ -521,8 +527,7 @@
                         TH này phải set lại màu của nút play
                     -->
 
-                    <a class="venobox" data-autoplay="false" data-vbtype="video"
-                        href="https://youtu.be/mVqdRSd0S58">
+                    <a class="venobox" data-autoplay="false" data-vbtype="video" href="https://youtu.be/mVqdRSd0S58">
                         <div class="comingSoon__video">
                             <img class="img-fluid" src="./img/slide-3-video.png" alt="coming soon trailer">
                             <i class="fa fa-play"></i>
@@ -622,7 +627,7 @@
                         <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="#"><i class="fab fa-google-plus-g"></i> Google +</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
